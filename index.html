@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP Angkasa Husein - 7 Kebiasaan Anak Indonesia Hebat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --navy-dark: #0F172A;
+            --blue-primary: #1E3A8A;
+            --blue-medium: #2563EB;
+            --blue-light: #38BDF8;
+            --blue-bg: #F0F9FF;
+            --orange-accent: #F97316;
+            --orange-hover: #EA580C;
+            --white: #FFFFFF;
+            --gray-text: #475569;
+            --card-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #0F172A 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: var(--navy-dark);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow Background Effects */
+        body::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.25) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.2) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(16px);
+            border-radius: 28px;
+            padding: 48px 36px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header Styling */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--blue-bg);
+            color: var(--blue-medium);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            margin-bottom: 16px;
+        }
+
+        .badge i {
+            color: var(--orange-accent);
+        }
+
+        .header h1 {
+            color: var(--blue-primary);
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .header h2 {
+            color: var(--orange-accent);
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .header h3 {
+            color: var(--blue-medium);
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .header-line {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue-light), var(--orange-accent));
+            margin: 18px auto 0;
+            border-radius: 2px;
+        }
+
+        .instruction {
+            text-align: center;
+            color: var(--gray-text);
+            font-size: 1rem;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        /* Cards Container */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            border: 2px solid #E2E8F0;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--blue-medium);
+            transition: background 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--blue-light);
+            box-shadow: var(--card-shadow);
+        }
+
+        .card:hover::before {
+            background: linear-gradient(90deg, var(--blue-light), var(--orange-accent));
+        }
+
+        .card-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--blue-bg);
+            color: var(--blue-medium);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .card-icon {
+            background: var(--blue-medium);
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--navy-dark);
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--gray-text);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px 20px;
+            background: linear-gradient(135deg, var(--orange-accent), var(--orange-hover));
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #EA580C, #C2410C);
+            box-shadow: 0 6px 18px rgba(249, 115, 22, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover i {
+            transform: translateX(4px);
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #E2E8F0;
+            color: var(--gray-text);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 868px) {
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .container {
+                padding: 32px 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header h2 {
+                font-size: 1.15rem;
+            }
+
+            .header h3 {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="badge">
+                <i class="fa-solid fa-star"></i> Character Building Portal
+            </div>
+            <h1>SMP ANGKASA HUSEIN</h1>
+            <h2>7 KEBIASAAN ANAK INDONESIA HEBAT</h2>
+            <h3>TAHUN PELAJARAN 2026/2027</h3>
+            <div class="header-line"></div>
+        </div>
+
+        <p class="instruction">
+            Silakan pilih tingkat kelas kamu di bawah ini untuk mengisi formulir kebiasaan harian:
+        </p>
+
+        <!-- Cards Grid -->
+        <div class="cards-grid">
+            <!-- Kelas VII -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="card-title">KELAS VII</div>
+                    <p class="card-desc">Formulir Isian Kebiasaan Harian untuk Siswa & Siswi Kelas 7</p>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdyWhqo1kp6U3Y_Uoya5wG9Wssg2jAprMdtIqCv3xxeEy2p_g/viewform?usp=sharing&ouid=114423295647446736639" target="_blank" class="btn">
+                    Isi Formulir <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Kelas VIII -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="card-title">KELAS VIII</div>
+                    <p class="card-desc">Formulir Isian Kebiasaan Harian untuk Siswa & Siswi Kelas 8</p>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScyWjP5TVilg4pID45MfpCTTaf_YyDJVWtTlZIo1Kd2qRxKag/viewform?usp=sharing&ouid=114423295647446736639" target="_blank" class="btn">
+                    Isi Formulir <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Kelas IX -->
+            <div class="card">
+                <div>
+                    <div class="card-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div class="card-title">KELAS IX</div>
+                    <p class="card-desc">Formulir Isian Kebiasaan Harian untuk Siswa & Siswi Kelas 9</p>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScmQeZNW3ZPeIwo3zzUcTq13dhrfDfJg-CPLHHFLCzNH1w1PQ/viewform?usp=sharing&ouid=114423295647446736639" target="_blank" class="btn">
+                    Isi Formulir <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            @copyright SMP ANGKASA HUSEIN
+        </div>
+    </div>
+
+</body>
+</html>
