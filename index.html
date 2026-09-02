@@ -252,6 +252,55 @@
             transform: translateX(4px);
         }
 
+        /* Extra Action Buttons Container */
+        .extra-actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .btn-sub {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-sub-primary {
+            background: var(--blue-primary);
+            color: var(--white);
+            border: 1px solid var(--blue-primary);
+        }
+
+        .btn-sub-primary:hover {
+            background: var(--navy-dark);
+            border-color: var(--navy-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(15, 23, 42, 0.2);
+        }
+
+        .btn-sub-secondary {
+            background: var(--blue-bg);
+            color: var(--blue-medium);
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-sub-secondary:hover {
+            background: var(--blue-medium);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.2);
+        }
+
         /* Footer */
         .footer {
             margin-top: 40px;
@@ -285,6 +334,14 @@
 
             .header h3 {
                 font-size: 0.95rem;
+            }
+
+            .extra-actions {
+                flex-direction: column;
+            }
+
+            .btn-sub {
+                width: 100%;
             }
         }
     </style>
@@ -350,6 +407,16 @@
                     Isi Formulir <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
+        </div>
+
+        <!-- Tombol Tambahan Menu -->
+        <div class="extra-actions">
+            <a href="https://linktr.ee/REFLEKSI7KAIH" target="_blank" class="btn-sub btn-sub-primary">
+                <i class="fa-solid fa-heart"></i> REFLEKSI ORANG TUA SISWA
+            </a>
+            <a href="https://datastudio.google.com/reporting/09480c01-5c28-4123-af99-10d6178f0c03" target="_blank" class="btn-sub btn-sub-secondary">
+                <i class="fa-solid fa-chart-line"></i> MONITORING 7KAIH
+            </a>
         </div>
 
         <!-- Footer -->
